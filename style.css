@@ -192,39 +192,25 @@ footer { padding: 28px var(--gutter) 32px; font-size: 14px; color: var(--muted);
   .btn { transition: none; }
 }
 
-/* большие экраны: увеличиваем всё, иначе на 1920 страница выглядит мелкой */
+/* большие экраны: размеры растут вместе с шириной окна */
 @media (min-width: 1200px) {
-  body { font-size: 21px; }
-  .wrap { max-width: 1400px; }
-  h1 { font-size: 72px; }
-  h2 { font-size: 52px; }
-  .lead { font-size: 24px; }
-  .phone { width: 360px; border-width: 11px; border-radius: 52px; }
-  .phone::before { width: 96px; height: 26px; top: 11px; }
-  .btn { min-height: 62px; padding: 0 36px; font-size: 20px; }
-  .top { padding: 18px 56px; }
-  .logo { font-size: 24px; }
-  .top-phone { font-size: 20px; }
-  .fixes strong { font-size: 24px; }
-  .fixes li { grid-template-columns: 340px 1fr; padding: 24px 0; }
-  .steps b { font-size: 22px; }
-  .steps li { grid-template-columns: 56px 1fr; }
-  .steps li::before { width: 56px; height: 56px; font-size: 22px; }
-  .shield dt { font-size: 22px; }
-  .screen { padding: 120px 56px; }
-  footer { font-size: 16px; }
-}
-@media (min-width: 1700px) {
-  body { font-size: 24px; }
-  .wrap { max-width: 1680px; gap: 120px; }
-  h1 { font-size: 92px; }
-  h2 { font-size: 64px; }
-  .lead { font-size: 28px; }
-  .phone { width: 430px; border-width: 13px; border-radius: 62px; }
-  .phone::before { width: 116px; height: 30px; top: 13px; }
-  .btn { min-height: 70px; padding: 0 44px; font-size: 23px; }
-  .fixes strong { font-size: 28px; }
-  .fixes li { grid-template-columns: 420px 1fr; }
-  .steps b { font-size: 26px; }
-  .shield dt { font-size: 26px; }
+  body { font-size: clamp(21px, 1.15vw, 44px); }
+  .wrap { max-width: min(88vw, 2400px); gap: 5vw; }
+  h1 { font-size: clamp(72px, 4.6vw, 170px); }
+  h2 { font-size: clamp(52px, 3.2vw, 120px); }
+  .lead { font-size: clamp(24px, 1.4vw, 54px); }
+  .phone { width: clamp(360px, 20vw, 760px); border-width: clamp(11px, 0.6vw, 22px); border-radius: clamp(52px, 3vw, 110px); }
+  .phone::before { width: 27%; height: 3.2%; top: 1.4%; }
+  .btn { min-height: clamp(62px, 3.4vw, 120px); padding: 0 clamp(36px, 2vw, 72px); font-size: clamp(20px, 1.1vw, 40px); }
+  .top { padding: clamp(18px, 1vw, 40px) 4vw; }
+  .logo { font-size: clamp(24px, 1.3vw, 50px); }
+  .top-phone { font-size: clamp(20px, 1.1vw, 40px); }
+  .fixes strong { font-size: clamp(24px, 1.3vw, 50px); }
+  .fixes li { grid-template-columns: 16vw 1fr; padding: clamp(24px, 1.3vw, 50px) 0; }
+  .steps b { font-size: clamp(22px, 1.2vw, 46px); }
+  .steps li { grid-template-columns: clamp(56px, 3vw, 110px) 1fr; }
+  .steps li::before { width: clamp(56px, 3vw, 110px); height: clamp(56px, 3vw, 110px); font-size: clamp(22px, 1.2vw, 44px); }
+  .shield dt { font-size: clamp(22px, 1.2vw, 46px); }
+  .screen { padding: clamp(120px, 6vw, 230px) 4vw; }
+  footer { font-size: clamp(16px, 0.9vw, 34px); }
 }

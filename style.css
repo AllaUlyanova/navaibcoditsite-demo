@@ -191,3 +191,40 @@ footer { padding: 28px var(--gutter) 32px; font-size: 14px; color: var(--muted);
   .glow { animation: none; }
   .btn { transition: none; }
 }
+
+/* большие экраны: увеличиваем всё, иначе на 1920 страница выглядит мелкой */
+@media (min-width: 1200px) {
+  body { font-size: 21px; }
+  .wrap { max-width: 1400px; }
+  h1 { font-size: 72px; }
+  h2 { font-size: 52px; }
+  .lead { font-size: 24px; }
+  .phone { width: 360px; border-width: 11px; border-radius: 52px; }
+  .phone::before { width: 96px; height: 26px; top: 11px; }
+  .btn { min-height: 62px; padding: 0 36px; font-size: 20px; }
+  .top { padding: 18px 56px; }
+  .logo { font-size: 24px; }
+  .top-phone { font-size: 20px; }
+  .fixes strong { font-size: 24px; }
+  .fixes li { grid-template-columns: 340px 1fr; padding: 24px 0; }
+  .steps b { font-size: 22px; }
+  .steps li { grid-template-columns: 56px 1fr; }
+  .steps li::before { width: 56px; height: 56px; font-size: 22px; }
+  .shield dt { font-size: 22px; }
+  .screen { padding: 120px 56px; }
+  footer { font-size: 16px; }
+}
+@media (min-width: 1700px) {
+  body { font-size: 24px; }
+  .wrap { max-width: 1680px; gap: 120px; }
+  h1 { font-size: 92px; }
+  h2 { font-size: 64px; }
+  .lead { font-size: 28px; }
+  .phone { width: 430px; border-width: 13px; border-radius: 62px; }
+  .phone::before { width: 116px; height: 30px; top: 13px; }
+  .btn { min-height: 70px; padding: 0 44px; font-size: 23px; }
+  .fixes strong { font-size: 28px; }
+  .fixes li { grid-template-columns: 420px 1fr; }
+  .steps b { font-size: 26px; }
+  .shield dt { font-size: 26px; }
+}
